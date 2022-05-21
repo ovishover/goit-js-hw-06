@@ -1,8 +1,8 @@
-const categList = document.querySelectorAll('li.item');
-console.log(categList);
+const countCatagory = document.querySelectorAll('.item');
+console.log(`Number of categories: ${countCatagory.length}`);
 
-const ulList = document.querySelectorAll('.item ul');
-for (const liItem of ulList) {
-  liItem.classList.add('itemsList');
+for (const item of countCatagory) {
+  console.log(`Categore: ${item.firstElementChild.textContent}`);
+  const countItems = item.querySelectorAll('li');
+  console.log(`Elements: ${countItems.length}`);
 }
-console.log(ulList);
