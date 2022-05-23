@@ -12,3 +12,11 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
+
+const ulList = document.querySelector('.gallery');
+console.log(ulList);
+
+const zero = '<p>sdf</p>';
+
+ulList.insertAdjacentHTML('beforeend', zero);
+ulList.insertAdjacentHTML('beforeend', zero);
