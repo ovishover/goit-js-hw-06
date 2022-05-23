@@ -12,11 +12,13 @@ const images = [
     alt: 'Group of Horses Running',
   },
 ];
-
 const ulList = document.querySelector('.gallery');
+const makeFlexboxGallery = itemImage => {
+  const { url, alt } = itemImage;
+  return `<li class='gallery__item'><img srcset="${url}" alt="${alt}"></img></li>`;
+};
+
+const makeStringWithImageItems = images.map(makeFlexboxGallery).join('');
+ulList.insertAdjacentHTML('beforeend', makeStringWithImageItems);
+
 console.log(ulList);
-
-const zero = '<p>sdf</p>';
-
-ulList.insertAdjacentHTML('beforeend', zero);
-ulList.insertAdjacentHTML('beforeend', zero);
