@@ -15,7 +15,7 @@ const images = [
 const ulList = document.querySelector('.gallery');
 const makeFlexboxGallery = itemImage => {
   const { url, alt } = itemImage;
-  return `<li class='gallery__item'><img srcset="${url}" alt="${alt}"></img></li>`;
+  return `<li class='gallery__item'><img src="${url}" alt="${alt}"></img></li>`;
 };
 
 const makeStringWithImageItems = images.map(makeFlexboxGallery).join('');
