@@ -10,7 +10,7 @@ CounterPlugin.prototype.decrement = function () {
 CounterPlugin.prototype.increment = function () {
   this._value += this._step;
 };
-const myCounter = new CounterPlugin({ stepCounter: 100 });
+// const myCounter = new CounterPlugin({ stepCounter: 100 });
 
 const incrBtn = document.querySelector("[data-action='increment']");
 const decrBtn = document.querySelector("[data-action='decrement']");
