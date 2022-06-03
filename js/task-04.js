@@ -1,10 +1,24 @@
-const incrBtn = document.querySelector("[data-action='increment']");
-const decrBtn = document.querySelector("[data-action='decrement']");
+const counter = {
+  value: 0,
+  increment() {
+    this.value += 1;
+    // console.log(counter.value);
+  },
+  decrement() {
+    this.value -= 1;
+    // console.log(counter.value);
+  },
+};
+
+const incrementBtn = document.querySelector("[data-action='increment']");
+const decrementrBtn = document.querySelector("[data-action='decrement']");
 const valueNum = document.querySelector('#value');
-valueNum.textContent = 0;
-incrBtn.addEventListener('click', () => {
-  valueNum.textContent = new Number(valueNum.textContent) + 1;
+
+incrementBtn.addEventListener('click', function () {
+  counter.increment();
+  valueNum.textContent = counter.value;
 });
-decrBtn.addEventListener('click', () => {
-  valueNum.textContent = new Number(valueNum.textContent) - 1;
+decrementrBtn.addEventListener('click', function () {
+  counter.decrement();
+  valueNum.textContent = counter.value;
 });
